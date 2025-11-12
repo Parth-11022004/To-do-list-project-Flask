@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8" />
+    <title>To-do list</title>
+  </head>
+  <body>
+    <h1>To-do List</h1>
+    {% if size==0 %}
+    <h3>No tasks</h3>
+    {% else %}
+    
+    <ol>
+      {% for task in tasks: %}
+      <li>
+        {{ task['name'] }}
+        <a class="delete-button" href="{{url_for('delete',task_id=task['id'])}}">Delete</a> 
+        <a class="button" href="{{url_for('update',task_id=task['id'],completed=1)}}">Mark as completed</a>
+        <a class="button" href="{{url_for('update',task_id=task['id'],completed=0)}}">Mark as pending</a>
+        {% if task['status']=='completed' %}
+        <span>✅</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    
+    {% endif %}
+
+    
+    <a class="button" href="{{url_for('clear')}}">Clear all tasks</a>
+    <a class="button" href="{{url_for('home')}}?status=pending">Show pending tasks</a>
+    <a class="button" href="{{url_for('home')}}?status=completed">Show completed tasks</a>
+    <a class="button" href="{{url_for('home')}}">Show all tasks</a>
+
+    <form action="{{url_for('home')}}" method="POST">
+      <label>Task name</label>
+      <input type="text" name="task"/>
+      <button type="submit">Add Task</button>
+    </form>
+
+  </body>
+</html>

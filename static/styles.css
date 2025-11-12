@@ -1,0 +1,92 @@
+body {
+font-family: sans-serif;
+margin: 40px;
+color: #333;
+}
+
+h1 {
+margin-bottom: 10px;
+}
+
+ol {
+padding-left: 20px;
+}
+
+li {
+margin-bottom: 8px;
+}
+
+a {
+color: #007bff;
+text-decoration: none;
+margin-left: 10px;
+font-size: 14px;
+}
+
+.button {
+display: inline-block;
+padding: 4px 8px;
+background-color: #007bff;
+color: white;
+border-radius: 3px;
+font-size: 13px;
+text-decoration: none;
+margin: 10px 10px 0 0;
+}
+
+.button:hover {
+background-color: #0056b3;
+}
+
+span {
+margin-left: 8px;
+}
+
+.delete-button {
+display: inline-block;
+padding: 4px 8px;
+background-color:crimson;
+color: white;
+border-radius: 3px;
+text-decoration: none;
+font-size: 13px;
+margin: 10px 10px 0 10px;
+}
+
+.delete-button:hover {
+    background-color: brown;
+}
+/* Form Styling */
+form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
